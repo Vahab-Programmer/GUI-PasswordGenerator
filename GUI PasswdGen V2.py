@@ -66,7 +66,7 @@ def Generate():
         else:
             messagebox.showerror("Error","You need to select Upper or Lower case Letters!")
     else:
-        messagebox.showerror("Error","Lenght Cannot be less than 7")
+        messagebox.showerror("Error","Lenght Cannot be less than 8")
 Root = Tk()
 Root.title("PasswdGen V2")
 Root.geometry("250x300")

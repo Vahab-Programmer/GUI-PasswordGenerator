@@ -35,35 +35,38 @@ def Generate():
     lo = low.get()
     sm = smy.get()
     nu = num.get()
-    if up or lo :
-        if up and lo and nu and sm:
-            PasswdGen(letters_full)
-        elif up and nu and sm and not lo:
-            PasswdGen(upcase_full)
-        elif lo and nu and sm and not up:
-            PasswdGen(lowcase_full)
-        elif up and lo and sm and not nu:
-            PasswdGen(letters_with_symbol)
-        elif up and sm and not lo and not nu:
-            PasswdGen(upcase_with_symbol)
-        elif lo and sm and not up and not nu:
-            PasswdGen(lowcase_with_symbol)
-        elif up and lo and nu and not sm:
-            PasswdGen(letters_with_digits)
-        elif up and nu and not lo and not sm:
-            PasswdGen(upcase_with_digits)
-        elif lo and nu and not up and not sm:
-            PasswdGen(lowcase_with_digits)
-        elif up and lo and not nu and not sm:
-            PasswdGen(letters)
-        elif up and not lo and not nu and not sm:
-            PasswdGen(upcase)
-        elif lo and not up and not nu and not sm:
-            PasswdGen(lowcase)
+    if lenght.get() >= 8:
+        if up or lo :
+            if up and lo and nu and sm:
+                PasswdGen(letters_full)
+            elif up and nu and sm and not lo:
+                PasswdGen(upcase_full)
+            elif lo and nu and sm and not up:
+                PasswdGen(lowcase_full)
+            elif up and lo and sm and not nu:
+                PasswdGen(letters_with_symbol)
+            elif up and sm and not lo and not nu:
+                PasswdGen(upcase_with_symbol)
+            elif lo and sm and not up and not nu:
+                PasswdGen(lowcase_with_symbol)
+            elif up and lo and nu and not sm:
+                PasswdGen(letters_with_digits)
+            elif up and nu and not lo and not sm:
+                PasswdGen(upcase_with_digits)
+            elif lo and nu and not up and not sm:
+                PasswdGen(lowcase_with_digits)
+            elif up and lo and not nu and not sm:
+                PasswdGen(letters)
+            elif up and not lo and not nu and not sm:
+                PasswdGen(upcase)
+            elif lo and not up and not nu and not sm:
+                PasswdGen(lowcase)
+            else:
+                messagebox.showerror("Error","You need to select option!")
         else:
-            messagebox.showerror("Error","You need to select option!")
+            messagebox.showerror("Error","You need to select Upper or Lower case Letters!")
     else:
-        messagebox.showerror("Error","You need to select Upper or Lower case Letters!")
+        messagebox.showerror("Error","Lenght Cannot be less than 7")
 Root = Tk()
 Root.title("PasswdGen V2")
 Root.geometry("250x300")

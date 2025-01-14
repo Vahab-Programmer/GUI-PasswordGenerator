@@ -4,7 +4,7 @@ A Simple GUI Python Password Generator
 
 i Created GUI app Using Tkinter
 
-This is my Fist GUI Python Project!
+This is my First GUI Python Project!
 
 This app Cannot Create Password with 7 or Less than 7 Lenght! but app can create Password With MAX Lenght 128
 

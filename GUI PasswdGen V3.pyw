@@ -3,6 +3,8 @@ from tkinter.messagebox import showerror
 from string import ascii_lowercase,ascii_uppercase,digits,punctuation
 from sys import exit
 from random import choices
+__author__="Vahab Programmer https://Github.com/Vahab-Programmer"
+__version__="0.0.3"
 def About()->None:
     Root.attributes("-disabled",1)
     aboutwin = Tk()
